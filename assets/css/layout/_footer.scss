@@ -1,50 +1,49 @@
-@use "../base/base";
 @use "../base/mixin";
-@use "../base/variables";
-@use "../object/utility/padding";
-@use "../object/utility/margin";
+@use "../base/variables" as var;
+@use "../object/utility/margin" as m;
+@use "../object/utility/padding" as p;
 
 .footer {
-  padding: padding.$padding64 padding.$padding16 padding.$padding32;
-  background-color: variables.colors(navy_1);
+  padding: p.$padding64 p.$padding16 p.$padding32;
+  background-color: var.colors(navy_1);
 
   &__recruit {
-    color: variables.colors(white_1) !important;
-    border: 1px solid variables.colors(white_1) !important;
-    margin: margin.$margin32 0 margin.$margin16;
+    color: var.colors(white_1) !important;
+    border: 1px solid var.colors(white_1) !important;
+    margin: m.$margin32 0 m.$margin16;
 
     .send-icon {
-      margin-left: margin.$margin8;
+      margin-left: m.$margin8;
     }
 
     &:hover {
-      background-color: variables.colors(white_1) !important;
-      color: variables.colors(gray6) !important;
-      border: 1px solid variables.colors(white_1);
+      background-color: var.colors(white_1) !important;
+      color: var.colors(gray6) !important;
+      border: 1px solid var.colors(white_1);
     }
   }
 
   &__contact {
-    color: variables.colors(white_1) !important;
-    border: 1px solid variables.colors(primary);
-    background-color: variables.colors(primary);
+    color: var.colors(white_1) !important;
+    border: 1px solid var.colors(primary);
+    background-color: var.colors(primary);
 
     .send-icon {
-      margin-left: margin.$margin8;
+      margin-left: m.$margin8;
     }
 
     &:hover {
-      background-color: variables.colors(white_1) !important;
-      color: variables.colors(gray6) !important;
-      border: 1px solid variables.colors(white_1);
+      background-color: var.colors(white_1) !important;
+      color: var.colors(gray6) !important;
+      border: 1px solid var.colors(white_1);
     }
   }
 
   &__nav {
 
     &-container {
-      border-bottom: 1px solid variables.colors(gray_5);
-      padding: padding.$padding32 0;
+      border-bottom: 1px solid var.colors(gray_5);
+      padding: p.$padding32 0;
     }
 
     &-logo {
@@ -58,13 +57,13 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: variables.colors(white_1);
+      color: var.colors(white_1);
       cursor: pointer;
     }
 
     &-link {
-      font-size: base.$text-l;
-      color: variables.colors(white_1);
+      font-size: variables.$text-l;
+      color: var.colors(white_1);
 
       &-allow {
 
@@ -83,17 +82,17 @@
         display: none;
 
         &__headline {
-          color: variables.colors(white_1);
+          color: var.colors(white_1);
           display: flex;
-          font-size: base.$text-m;
+          font-size: variables.$text-m;
 
           &:hover {
-            background-color: variables.colors(gray5);
+            background-color: var.colors(gray5);
             border-radius: 5px;
           }
 
-          & > p {
-            font-size: base.$text-m;
+          &>p {
+            font-size: variables.$text-m;
           }
         }
       }
@@ -101,11 +100,11 @@
   }
 
   &__info {
-    padding: padding.$padding16 0;
+    padding: p.$padding16 0;
     display: flex;
     justify-content: space-between;
-    border-bottom: 1px solid variables.colors(gray_5);
-    margin-bottom: margin.$margin96;
+    border-bottom: 1px solid var.colors(gray_5);
+    margin-bottom: m.$margin96;
   }
 
   &__sns {
@@ -114,22 +113,22 @@
     &-item {
       display: flex;
       align-items: center;
-      margin-bottom: margin.$margin16;
+      margin-bottom: m.$margin16;
 
       &:last-child {
         margin-bottom: 0;
       }
 
       &:hover {
-        background-color: variables.colors(gray5);
+        background-color: var.colors(gray5);
         border-radius: 4px;
       }
     }
 
     &-text {
-      margin-left: margin.$margin8;
-      font-size: base.$text-r;
-      color: variables.colors(white_1);
+      margin-left: m.$margin8;
+      font-size: variables.$text-r;
+      color: var.colors(white_1);
     }
   }
 
@@ -138,28 +137,28 @@
 
     &-text {
       display: block;
-      margin-bottom: margin.$margin16;
-      font-size: base.$text-r;
-      color: variables.colors(white_1);
+      margin-bottom: m.$margin16;
+      font-size: variables.$text-r;
+      color: var.colors(white_1);
 
       &:last-child {
         margin-bottom: 0;
       }
 
       &:hover {
-        background-color: variables.colors(gray5);
+        background-color: var.colors(gray5);
         border-radius: 4px;
       }
     }
   }
 
   &__copy {
-    font-size: base.$text-r;
-    color: variables.colors(white_1);
+    font-size: variables.$text-r;
+    color: var.colors(white_1);
   }
 
-  @include mixin.mq(lg-header) {
-    padding-top: padding.$padding96;
+  @include mixin.mq(xl) {
+    padding-top: p.$padding96;
 
     &__container {
       max-width: 102.4rem;
@@ -178,7 +177,7 @@
 
     &__recruit {
       width: 15rem;
-      margin: 0 margin.$margin16 0 0;
+      margin: 0 m.$margin16 0 0;
     }
 
     &__contact {
@@ -199,12 +198,12 @@
           display: block;
 
           &__headline {
-            font-size: base.$text-r;
-            color: variables.colors(white_1);
+            font-size: variables.$text-r;
+            color: var.colors(white_1);
             display: flex;
 
-            & > p {
-              font-size: base.$text-r;
+            &>p {
+              font-size: variables.$text-r;
             }
           }
 
@@ -215,7 +214,7 @@
       }
 
       &-link {
-        font-size: base.$text-m;
+        font-size: variables.$text-m;
 
         &-allow {
           display: none;
@@ -233,8 +232,8 @@
       margin: 0 auto;
       display: block;
       max-width: 102.4rem;
-      border-top: 1px solid variables.colors(gray_5);
-      padding-top: padding.$padding96;
+      border-top: 1px solid var.colors(gray_5);
+      padding-top: p.$padding96;
     }
   }
 }

@@ -1,9 +1,7 @@
-@use "../base/base";
 @use "../base/mixin";
-@use "../base/variables";
-@use "../object/utility/padding";
-@use "../object/utility/margin";
-
+@use "../base/variables" as var;
+@use "../object/utility/margin" as m;
+@use "../object/utility/padding" as p;
 
 .nav {
 
@@ -11,7 +9,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: padding.$padding32 padding.$padding16;
+    padding: p.$padding32 p.$padding16;
   }
 
   &__logo {
@@ -50,7 +48,7 @@
 
   &__content {
     position: fixed;
-    background-color: variables.colors(white_1);
+    background-color: var.colors(white_1);
     top: 10rem;
     left: 0;
     right: 0;
@@ -59,7 +57,7 @@
     visibility: hidden;
     overflow: auto;
     transition: ease 0.4s;
-    padding: padding.$padding32 padding.$padding16 padding.$padding256;
+    padding: p.$padding32 p.$padding16 p.$padding256;
     z-index: 100;
 
     &.active {
@@ -76,7 +74,7 @@
   }
 
   &__link {
-    font-size: base.$text-l;
+    font-size: variables.$text-l;
 
     &-allow {
       width: 2.4rem;
@@ -97,36 +95,36 @@
         display: flex;
 
         &>p {
-          font-size: base.$text-m;
+          font-size: variables.$text-m;
         }
       }
 
       &__content {
-        padding: padding.$padding16 0;
+        padding: p.$padding16 0;
       }
 
       &__category {
         display: flex;
         list-style: inside;
-        color: variables.colors(gray_4);
-        padding-left: padding.$padding16;
+        color: var.colors(gray_4);
+        padding-left: p.$padding16;
         border-radius: 0.5rem;
-        background-color: variables.colors(gray_1);
+        background-color: var.colors(gray_1);
 
         &-icon {
-          margin-left: margin.$margin8;
+          margin-left: m.$margin8;
         }
 
         &:not(:last-child) {
-          margin-bottom: margin.$margin8;
+          margin-bottom: m.$margin8;
         }
 
         &:hover {
-          background-color: variables.colors(gray2);
+          background-color: var.colors(gray2);
         }
 
         &>li>span {
-          font-size: base.$text-r;
+          font-size: variables.$text-r;
           color: #000;
         }
       }
@@ -145,23 +143,23 @@
     left: 0;
     right: 0;
     box-sizing: border-box;
-    background-color: variables.colors(white_1);
-    border-top: 1px solid variables.colors(gray_3);
-    padding: padding.$padding32 padding.$padding16;
+    background-color: var.colors(white_1);
+    border-top: 1px solid var.colors(gray_3);
+    padding: p.$padding32 p.$padding16;
 
     &-button {
-      font-size: base.$text-r;
+      font-size: variables.$text-r;
       display: flex;
       justify-content: center;
       align-items: center;
 
       &>img {
-        margin-left: margin.$margin8;
+        margin-left: m.$margin8;
       }
     }
   }
 
-  @include mixin.mq(lg-header) {
+  @include mixin.mq(xl) {
     font-size: 8rem;
 
     &__container {
@@ -199,7 +197,7 @@
     }
 
     &__item {
-      margin-right: margin.$margin16;
+      margin-right: m.$margin16;
 
       &-sub {
         position: fixed;
@@ -207,15 +205,15 @@
         top: 134px;
         left: 0;
         right: 0;
-        padding: padding.$padding64;
+        padding: p.$padding64;
         box-sizing: border-box;
-        background-color: variables.colors(white_1);
+        background-color: var.colors(white_1);
 
         &__headline {
           display: flex;
 
           &>p {
-            font-size: base.$text-r;
+            font-size: variables.$text-r;
           }
         }
 
@@ -241,16 +239,16 @@
 
       &>ul {
         width: 25rem;
-        margin-right: margin.$margin64;
+        margin-right: m.$margin64;
       }
     }
 
     &__recruit {
-      margin-right: margin.$margin32;
+      margin-right: m.$margin32;
     }
 
     &__link {
-      margin-right: margin.$margin4;
+      margin-right: m.$margin4;
       font-size: 1.6rem;
 
       &-allow {
@@ -271,7 +269,7 @@
         min-width: 15.5rem;
 
         &>button {
-          font-size: base.$text-r;
+          font-size: variables.$text-r;
         }
 
         &>img {
