@@ -1,0 +1,406 @@
+@use "../../base/variables";
+@use "../utility/padding";
+@use "../utility/margin";
+@use "../../base/base";
+@use "../../base/mixin";
+
+%title {
+  font-size: base.$text-m;
+  margin-bottom: margin.$margin16;
+  color: variables.colors(primary);
+}
+
+main {
+  overflow: hidden;
+}
+
+.message {
+  padding: padding.$padding128 padding.$padding16 padding.$padding96;
+
+  &__title {
+
+    @extend %title;
+    text-align: center;
+  }
+
+  &__text {
+    text-align: center;
+    margin-bottom: margin.$margin32;
+  }
+
+  &__description {
+    text-align: center;
+    margin-bottom: margin.$margin32;
+  }
+
+  &__btn {
+
+    &-inner {
+      display: flex;
+      justify-content: center;
+      margin: 0 auto;
+    }
+  }
+}
+
+.slide {
+  padding-bottom: padding.$padding128;
+
+  &__item {
+    margin: margin.$margin4;
+    border-radius: 1rem;
+    overflow: hidden;
+
+    &>img {
+      max-height: 20rem;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.solution {
+  padding: 0 padding.$padding16 padding.$padding128;
+
+  &__video {
+    height: 36rem;
+    border-radius: 5rem;
+    width: 100%;
+    object-fit: cover;
+    margin-bottom: margin.$margin32;
+  }
+
+  &__title {
+
+    @extend %title;
+  }
+
+  &__text {
+    margin-bottom: margin.$margin32;
+  }
+
+  &__description {
+    margin-bottom: margin.$margin32;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+.clients {
+  padding-bottom: padding.$padding128;
+
+  &__title {
+
+    @extend %title;
+    text-align: center;
+    margin-bottom: margin.$margin32;
+  }
+
+  &__slide {
+
+    &-child {
+      margin: margin.$margin4;
+      border-radius: 1rem;
+      overflow: hidden;
+
+      &>img {
+        max-height: 20rem;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+  }
+}
+
+.recruit {
+  padding: 0 padding.$padding16 padding.$padding128;
+
+  &__img {
+
+    &-container {
+      position: relative;
+      height: 39.2rem;
+    }
+
+    &-above {
+      position: absolute;
+      top: 0;
+      left: -7%;
+      width: 100%;
+      height: 24rem;
+      object-fit: cover;
+      border-top-right-radius: 5rem;
+      border-bottom-right-radius: 5rem;
+    }
+
+    &-below {
+      position: absolute;
+      top: 66%;
+      right: -7%;
+      width: 100%;
+      height: 12rem;
+      object-fit: cover;
+      border-top-left-radius: 5rem;
+      border-bottom-left-radius: 5rem;
+    }
+  }
+
+  &__title {
+
+    @extend %title;
+  }
+
+  &__text {
+    word-break: break-all;
+    margin-bottom: margin.$margin32;
+  }
+
+  &__description {
+    margin-bottom: margin.$margin32;
+  }
+
+  &__btn {
+
+    &-info {
+      max-width: 20.8rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: margin.$margin16;
+    }
+
+    &-mission {
+      max-width: 30.4rem;
+    }
+  }
+}
+
+.news {
+  padding: 0 padding.$padding16 padding.$padding128;
+
+  &__title {
+    text-align: center;
+    margin-bottom: margin.$margin32;
+    color: variables.colors(primary);
+  }
+
+  &__container {
+    margin-bottom: margin.$margin32;
+
+  }
+
+  &__content {
+    display: block;
+    margin-bottom: margin.$margin16;
+
+    &:hover {
+      opacity: 0.6;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    margin-bottom: margin.$margin16;
+    max-height: 20rem;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 2rem;
+  }
+
+  &__text {
+    font-size: base.$text-m;
+    margin-bottom: margin.$margin8;
+  }
+
+  &__date {
+    color: variables.colors(primary);
+    font-size: base.$text-s;
+  }
+
+  &__btn {
+
+    &-all {
+      max-width: 27rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: margin.$margin16;
+    }
+
+    &-release {
+      max-width: 25.6rem;
+      display: flex;
+      justify-content: center;
+      margin-bottom: margin.$margin16;
+    }
+
+    &-info {
+      max-width: 28.8rem;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
+
+@include mixin.mq(lg-header) {
+
+  .message {
+
+    &__title {
+      margin-bottom: margin.$margin32;
+    }
+
+    &__text {
+      margin-bottom: margin.$margin64;
+    }
+  }
+
+  .slide {
+    padding-bottom: padding.$padding256;
+
+    &__item {
+
+      &>img {
+        max-height: 28rem;
+        max-width: fit-content;
+      }
+
+      &-below {
+        display: none;
+      }
+    }
+  }
+
+  .solution {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: padding.$padding256;
+
+    &__video {
+      height: 48rem;
+      max-width: 48rem;
+      object-fit: cover;
+      margin-bottom: 0;
+    }
+
+    &__content {
+      width: 48%;
+    }
+
+    &__title {
+
+      @extend %title;
+      margin-bottom: margin.$margin32;
+    }
+
+    &__text {
+      line-height: 1.3;
+      margin-bottom: margin.$margin64;
+    }
+  }
+
+  .clients {
+    padding-bottom: padding.$padding256;
+
+    &__title {
+
+      @extend %title;
+      text-align: center;
+      margin-bottom: margin.$margin32;
+    }
+  }
+
+  .recruit {
+    position: relative;
+    max-width: 102.4rem;
+    margin: 0 auto;
+    padding: 0 padding.$padding16 padding.$padding256;
+    height: 73.2rem;
+
+    &__img {
+
+      &-container {
+        position: static;
+        height: 39.2rem;
+      }
+
+      &-above {
+        top: 0;
+        left: -22%;
+        max-width: 90.5rem;
+        height: 44rem;
+        border-radius: 5rem;
+      }
+
+      &-below {
+        position: absolute;
+        top: 56%;
+        right: 61%;
+        max-width: 40rem;
+        height: 20rem;
+        border-radius: 5rem;
+      }
+    }
+
+    &__content {
+      position: absolute;
+      top: 10%;
+      right: 0%;
+      left: 51%;
+      padding: padding.$padding96 0 0 padding.$padding96;
+      background-color: variables.colors(white_1);
+      border-top-left-radius: 5rem;
+    }
+
+    &__title {
+      margin-bottom: margin.$margin32;
+    }
+
+    &__text {
+      margin-bottom: margin.$margin64;
+    }
+  }
+
+  .news {
+    max-width: 102.4rem;
+    margin: 0 auto;
+    padding: 0 padding.$padding16 padding.$padding128;
+
+    &__container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__content {
+      width: 49%;
+    }
+
+    &__btn {
+      display: flex;
+      justify-content: center;
+
+      &-all {
+        width: 27rem;
+        margin-bottom: 0;
+        margin-right: margin.$margin16;
+      }
+
+      &-release {
+        width: 25.6rem;
+        margin-bottom: 0;
+        margin-right: margin.$margin16;
+      }
+
+      &-info {
+        width: 28.8rem;
+      }
+    }
+  }
+}

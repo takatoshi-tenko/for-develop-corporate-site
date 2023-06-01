@@ -1,0 +1,40 @@
+/*
+Theme Name: retrieva
+Version: 1.0
+Description: レトリバコーポレートサイト
+*/
+
+/* ==============================
+base
+============================== */
+@use "base/reset";
+@use "base/mixin";
+@use "base/base";
+
+/* ==============================
+layout
+============================== */
+@use "layout/header";
+@use "layout/footer";
+
+/* ==============================
+object
+============================== */
+
+/* Component
+------------------------------ */
+@use "object/component/breadcrumb";
+@use "object/component/button";
+@use "object/component/key-visual";
+@use "object/component/modal";
+@use "object/component/toc";
+
+/* Project
+------------------------------ */
+@use "object/project/home";
+@use "object/project/vision";
+
+/* Utility
+------------------------------ */
+@use "object/utility/margin";
+@use "object/utility/padding";

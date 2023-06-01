@@ -1,0 +1,86 @@
+@use "../base/mixin";
+
+html {
+  min-height: 100%;
+  font-family: "Noto Serif JP", "Yu Gothic Medium", sans-serif;
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  min-height: 100%;
+  position: relative;
+  line-height: 1.6;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-style: normal;
+  font-weight: 400;
+}
+
+h1 {
+  font-size: 6rem;
+  line-height: 1.5;
+
+  @include mixin.mq(lg) {
+    font-size: 8rem;
+  }
+}
+
+h2 {
+  font-size: 4rem;
+  line-height: 1.5;
+
+  @include mixin.mq(lg) {
+    font-size: 6rem;
+  }
+}
+
+h3 {
+  font-size: 3.2rem;
+  line-height: 1.5;
+
+  @include mixin.mq(lg) {
+    font-size: 4rem;
+  }
+}
+
+h4 {
+  font-size: 2.4rem;
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol,
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+button {
+  background: none;
+  border: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+p {
+  letter-spacing: 0.1em;
+  font-size: 1.6rem;
+}
+
+$text-l: 3.2rem;
+$text-m: 2.4rem;
+$text-r: 1.6rem;
+$text-s: 1.2rem;

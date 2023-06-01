@@ -1,0 +1,25 @@
+$colors: (
+  primary: #1e50a2,
+  white_1: #fff,
+  gray1: #f6f7f9,
+  gray2: #d6dee6,
+  gray3: #b3bfcc,
+  gray4: #8494a4,
+  gray5: #586b7e,
+  gray6: #3d5266,
+  gray7: #2b4054,
+  gray8: #182b3f,
+  RightBlue: #80aaff,
+  navy_1: #1e3250,
+  navy_2: #182b3f,
+  gray_1: #f4f6f8,
+  gray_3: #d4dee3,
+  gray_4: #a0b4be,
+  gray_5: #647d91,
+  gray_6: #8494a4,
+);
+
+@function colors($key) {
+
+  @return map-get($colors, $key);
+}

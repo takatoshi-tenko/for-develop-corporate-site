@@ -1,0 +1,42 @@
+@use "../../base/variables";
+@use "../utility/padding";
+@use "../utility/margin";
+@use "../../base/base";
+@use "../../base/mixin";
+
+.toc {
+  position: absolute;
+  bottom: -5%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: base.$text-r;
+  color: variables.colors(white_1);
+  background-color: variables.colors(navy_2);
+  padding: 2rem padding.$padding32;
+  border-radius: 10rem;
+  max-width: 102.4rem;
+  width: 70%;
+
+  &__wrapper {
+    padding: 0 padding.$padding16;
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+  }
+
+  &__link {
+    margin-right: margin.$margin8;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+}
+
+@include mixin.mq(lg-header) {
+  .toc {
+    width: 85%;
+  }
+}

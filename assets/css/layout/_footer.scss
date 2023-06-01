@@ -1,0 +1,240 @@
+@use "../base/base";
+@use "../base/mixin";
+@use "../base/variables";
+@use "../object/utility/padding";
+@use "../object/utility/margin";
+
+.footer {
+  padding: padding.$padding64 padding.$padding16 padding.$padding32;
+  background-color: variables.colors(navy_1);
+
+  &__recruit {
+    color: variables.colors(white_1) !important;
+    border: 1px solid variables.colors(white_1) !important;
+    margin: margin.$margin32 0 margin.$margin16;
+
+    .send-icon {
+      margin-left: margin.$margin8;
+    }
+
+    &:hover {
+      background-color: variables.colors(white_1) !important;
+      color: variables.colors(gray6) !important;
+      border: 1px solid variables.colors(white_1);
+    }
+  }
+
+  &__contact {
+    color: variables.colors(white_1) !important;
+    border: 1px solid variables.colors(primary);
+    background-color: variables.colors(primary);
+
+    .send-icon {
+      margin-left: margin.$margin8;
+    }
+
+    &:hover {
+      background-color: variables.colors(white_1) !important;
+      color: variables.colors(gray6) !important;
+      border: 1px solid variables.colors(white_1);
+    }
+  }
+
+  &__nav {
+
+    &-container {
+      border-bottom: 1px solid variables.colors(gray_5);
+      padding: padding.$padding32 0;
+    }
+
+    &-logo {
+
+      &:hover {
+        opacity: 0.6;
+      }
+    }
+
+    &-headline {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: variables.colors(white_1);
+      cursor: pointer;
+    }
+
+    &-link {
+      font-size: base.$text-l;
+      color: variables.colors(white_1);
+
+      &-allow {
+
+        width: 2.4rem;
+        height: 2.4rem;
+
+        &.active {
+          transform: rotate(180deg);
+        }
+      }
+    }
+
+    &-item {
+
+      &-sub {
+        display: none;
+
+        &__headline {
+          color: variables.colors(white_1);
+          display: flex;
+          font-size: base.$text-m;
+
+          &:hover {
+            background-color: variables.colors(gray5);
+            border-radius: 5px;
+          }
+
+          & > p {
+            font-size: base.$text-m;
+          }
+        }
+      }
+    }
+  }
+
+  &__info {
+    padding: padding.$padding16 0;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid variables.colors(gray_5);
+    margin-bottom: margin.$margin96;
+  }
+
+  &__sns {
+    width: 45%;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: margin.$margin16;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: variables.colors(gray5);
+        border-radius: 4px;
+      }
+    }
+
+    &-text {
+      margin-left: margin.$margin8;
+      font-size: base.$text-r;
+      color: variables.colors(white_1);
+    }
+  }
+
+  &__policy {
+    width: 50%;
+
+    &-text {
+      display: block;
+      margin-bottom: margin.$margin16;
+      font-size: base.$text-r;
+      color: variables.colors(white_1);
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &:hover {
+        background-color: variables.colors(gray5);
+        border-radius: 4px;
+      }
+    }
+  }
+
+  &__copy {
+    font-size: base.$text-r;
+    color: variables.colors(white_1);
+  }
+
+  @include mixin.mq(lg-header) {
+    padding-top: padding.$padding96;
+
+    &__container {
+      max-width: 102.4rem;
+      margin: 0 auto;
+    }
+
+    &__heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    &__offer {
+      display: flex;
+    }
+
+    &__recruit {
+      width: 15rem;
+      margin: 0 margin.$margin16 0 0;
+    }
+
+    &__contact {
+      width: 15rem;
+    }
+
+    &__nav {
+
+      &-list {
+        display: flex;
+        justify-content: space-between;
+      }
+
+      &-item {
+        width: 24%;
+
+        &-sub {
+          display: block;
+
+          &__headline {
+            font-size: base.$text-r;
+            color: variables.colors(white_1);
+            display: flex;
+
+            & > p {
+              font-size: base.$text-r;
+            }
+          }
+
+          &__content {
+            display: none;
+          }
+        }
+      }
+
+      &-link {
+        font-size: base.$text-m;
+
+        &-allow {
+          display: none;
+        }
+      }
+    }
+
+    &__info {
+      width: 50%;
+      border-bottom: none;
+      margin-bottom: 0;
+    }
+
+    &__copy {
+      margin: 0 auto;
+      display: block;
+      max-width: 102.4rem;
+      border-top: 1px solid variables.colors(gray_5);
+      padding-top: padding.$padding96;
+    }
+  }
+}
