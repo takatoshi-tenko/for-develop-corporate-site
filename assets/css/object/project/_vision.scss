@@ -1,43 +1,42 @@
-@use "../../base/variables";
-@use "../utility/padding" as p;
-@use "../utility/margin";
-@use "../../base/base";
 @use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
 
 .vision {
   &-content {
     padding: 0 p.$padding64;
 
     &.mission {
-      margin-bottom: margin.$margin64;
+      margin-bottom: m.$margin64;
     }
 
     &.vision {
-      margin-bottom: margin.$margin128;
+      margin-bottom: m.$margin128;
     }
 
     &.company-overview {
-      margin-bottom: margin.$margin64;
+      margin-bottom: m.$margin64;
     }
 
     &__primary {
-      background-color: variables.colors(primary);
-      padding: padding.$padding128 0;
-      color: variables.colors(white_1);
+      background-color: var.colors(primary);
+      padding: p.$padding128 0;
+      color: var.colors(white_1);
     }
 
     &__secondary {
       position: relative;
       margin: -5rem auto 0;
-      background-color: variables.colors(gray1);
-      padding: 0 padding.$padding16 padding.$padding128;
+      background-color: var.colors(gray1);
+      padding: 0 p.$padding16 p.$padding128;
       border-top-left-radius: 5rem;
       border-top-right-radius: 5rem;
       max-width: 102.4rem;
     }
 
     &__video {
-      margin-bottom: margin.$margin32;
+      margin-bottom: m.$margin32;
       width: 100%;
       height: 36rem;
       border-radius: 5rem;
@@ -51,39 +50,39 @@
 
       &.product {
         max-width: 100%;
-        margin-bottom: margin.$margin64;
+        margin-bottom: m.$margin64;
       }
 
       &.secondary {
         border-radius: 24rem;
         height: 68.6rem;
         max-width: 48rem;
-        margin-bottom: margin.$margin64;
-        margin-top: margin.$margin128;
+        margin-bottom: m.$margin64;
+        margin-top: m.$margin128;
       }
     }
 
     &__title {
-      margin-bottom: margin.$margin16;
-      font-size: base.$text-m;
-      color: variables.colors(primary);
+      margin-bottom: m.$margin16;
+      font-size: var.$text-m;
+      color: var.colors(primary);
 
       &.company-overview {
-        color: variables.colors(RightBlue);
+        color: var.colors(RightBlue);
       }
     }
 
     &__text {
-      margin-bottom: margin.$margin32;
+      margin-bottom: m.$margin32;
       word-break: break-all;
 
       &-sub {
-        margin-bottom: margin.$margin16;
+        margin-bottom: m.$margin16;
       }
     }
 
     &__description {
-      margin-bottom: margin.$margin32;
+      margin-bottom: m.$margin32;
       word-break: break-all;
     }
 
@@ -92,7 +91,7 @@
       &-inner {
         display: flex;
         justify-content: center;
-        background-color: variables.colors(navy_1);
+        background-color: var.colors(navy_1);
 
         &.product {
           margin: 0 auto;
@@ -100,21 +99,21 @@
         }
 
         &:hover {
-          background-color: variables.colors(gray6);
+          background-color: var.colors(gray6);
         }
       }
 
       &-outer {
         background-color: transparent;
-        border: 1px solid variables.colors(white_1);
+        border: 1px solid var.colors(white_1);
         max-width: 100%;
 
         &:hover {
-          background-color: variables.colors(gray6);
+          background-color: var.colors(gray6);
         }
 
         &:first-of-type {
-          margin-bottom: margin.$margin16;
+          margin-bottom: m.$margin16;
         }
       }
 
@@ -123,7 +122,7 @@
         justify-content: center;
 
         &:hover {
-          background-color: variables.colors(gray6);
+          background-color: var.colors(gray6);
         }
       }
 
@@ -136,7 +135,7 @@
     }
 
     &__product {
-      padding: 0 padding.$padding16;
+      padding: 0 p.$padding16;
 
       &-line {
         position: absolute;
@@ -146,7 +145,7 @@
         width: 2px;
         height: 4.5rem;
         transform: translateX(-50%);
-        background-color: variables.colors(white_1);
+        background-color: var.colors(white_1);
 
         &-above {
           position: absolute;
@@ -154,7 +153,7 @@
           left: 0;
           width: 100%;
           height: 7rem;
-          border: 2px solid variables.colors(white_1);
+          border: 2px solid var.colors(white_1);
           border-radius: 4rem;
           clip-path: polygon(0% 0%, 100% 0%, 95% 90%, 5% 90%);
         }
@@ -165,68 +164,68 @@
           left: 0;
           width: 100%;
           height: 7rem;
-          border: 2px solid variables.colors(white_1);
+          border: 2px solid var.colors(white_1);
           border-radius: 4rem;
           clip-path: polygon(100% 100%, 0% 100%, 5% 10%, 95% 10%);
         }
       }
 
       &-category {
-        font-size: base.$text-r;
-        color: variables.colors(RightBlue);
-        margin-bottom: margin.$margin32;
+        font-size: var.$text-r;
+        color: var.colors(RightBlue);
+        margin-bottom: m.$margin32;
       }
 
       &-container {
         position: relative;
-        padding-top: padding.$padding64;
+        padding-top: p.$padding64;
       }
 
       &-content {
-        padding: padding.$padding32 padding.$padding8;
-        border: 1px solid variables.colors(white_1);
-        margin-bottom: margin.$margin16;
+        padding: p.$padding32 p.$padding8;
+        border: 1px solid var.colors(white_1);
+        margin-bottom: m.$margin16;
         border-radius: 2rem;
 
         &:last-of-type {
-          margin-bottom: margin.$margin64;
+          margin-bottom: m.$margin64;
         }
       }
 
       &-headline {
-        margin-bottom: margin.$margin16;
-        font-size: base.$text-m;
+        margin-bottom: m.$margin16;
+        font-size: var.$text-m;
         text-align: center;
 
         &:not(:first-of-type) {
-          margin-bottom: margin.$margin32;
+          margin-bottom: m.$margin32;
         }
       }
 
       &-text {
-        margin-bottom: margin.$margin32;
+        margin-bottom: m.$margin32;
       }
 
       &-description {
-        margin-bottom: margin.$margin32;
+        margin-bottom: m.$margin32;
       }
     }
 
     &__ceo {
-      font-size: base.$text-m;
-      margin: margin.$margin32 0;
+      font-size: var.$text-m;
+      margin: m.$margin32 0;
     }
 
     &__next {
-      padding: 0 padding.$padding16;
+      padding: 0 p.$padding16;
 
       &-container {
-        padding-bottom: padding.$padding64;
+        padding-bottom: p.$padding64;
       }
 
       &-title {
-        font-size: base.$text-l;
-        margin: margin.$margin64 0;
+        font-size: var.$text-l;
+        margin: m.$margin64 0;
         text-align: center;
       }
 
@@ -237,7 +236,7 @@
 
       &-link {
         max-width: 100%;
-        margin-bottom: margin.$margin16;
+        margin-bottom: m.$margin16;
 
         &:last-child {
           margin-bottom: 0;
@@ -254,27 +253,27 @@
       justify-content: center;
 
       &.mission {
-        margin-bottom: margin.$margin128;
+        margin-bottom: m.$margin128;
       }
 
       &.vision {
-        margin-bottom: margin.$margin256;
+        margin-bottom: m.$margin256;
       }
 
       &.company-overview {
         align-items: center;
-        margin-bottom: margin.$margin128;
+        margin-bottom: m.$margin128;
       }
 
       &__primary {
-        padding: padding.$padding256 0;
+        padding: p.$padding256 0;
       }
 
       &__secondary {
         position: relative;
         margin: -5rem auto 0;
-        background-color: variables.colors(gray1);
-        padding: 0 padding.$padding16 padding.$padding128;
+        background-color: var.colors(gray1);
+        padding: 0 p.$padding16 p.$padding128;
         border-top-left-radius: 5rem;
         border-top-right-radius: 5rem;
         max-width: 102.4rem;
@@ -282,7 +281,7 @@
 
       &__video {
         margin-bottom: 0;
-        margin-right: margin.$margin64;
+        margin-right: m.$margin64;
         max-width: 48rem;
         height: 48rem;
 
@@ -295,7 +294,7 @@
         &.product {
           max-width: 102.4rem;
           height: 72rem;
-          margin: 0 auto margin.$margin64;
+          margin: 0 auto m.$margin64;
           display: flex;
           justify-content: center;
         }
@@ -304,8 +303,8 @@
           border-radius: 24rem;
           height: 68.6rem;
           max-width: 48rem;
-          margin-bottom: margin.$margin64;
-          margin-top: margin.$margin128;
+          margin-bottom: m.$margin64;
+          margin-top: m.$margin128;
         }
       }
 
@@ -314,20 +313,20 @@
       }
 
       &__title {
-        margin-bottom: margin.$margin32;
-        font-size: base.$text-m;
-        color: variables.colors(primary);
+        margin-bottom: m.$margin32;
+        font-size: var.$text-m;
+        color: var.colors(primary);
 
         &.company-overview {
-          color: variables.colors(RightBlue);
+          color: var.colors(RightBlue);
         }
       }
 
       &__text {
-        margin-bottom: margin.$margin64;
+        margin-bottom: m.$margin64;
 
         &-sub {
-          margin-bottom: margin.$margin16;
+          margin-bottom: m.$margin16;
         }
       }
 
@@ -335,7 +334,7 @@
         margin-bottom: 0;
 
         &.company-overview {
-          margin-bottom: margin.$margin32;
+          margin-bottom: m.$margin32;
         }
       }
 
@@ -344,7 +343,7 @@
         &-inner {
           display: flex;
           justify-content: center;
-          background-color: variables.colors(navy_1);
+          background-color: var.colors(navy_1);
 
           &.product {
             margin: 0 auto;
@@ -352,21 +351,21 @@
           }
 
           &:hover {
-            background-color: variables.colors(gray6);
+            background-color: var.colors(gray6);
           }
         }
 
         &-outer {
           background-color: transparent;
-          border: 1px solid variables.colors(white_1);
+          border: 1px solid var.colors(white_1);
           max-width: 100%;
 
           &:hover {
-            background-color: variables.colors(gray6);
+            background-color: var.colors(gray6);
           }
 
           &:first-of-type {
-            margin-bottom: margin.$margin16;
+            margin-bottom: m.$margin16;
           }
         }
 
@@ -375,7 +374,7 @@
           justify-content: center;
 
           &:hover {
-            background-color: variables.colors(gray6);
+            background-color: var.colors(gray6);
           }
         }
 
@@ -388,7 +387,7 @@
       }
 
       &__product {
-        padding: 0 padding.$padding16;
+        padding: 0 p.$padding16;
 
         &-line {
           position: absolute;
@@ -398,7 +397,7 @@
           width: 2px;
           height: 4.5rem;
           transform: translateX(-50%);
-          background-color: variables.colors(white_1);
+          background-color: var.colors(white_1);
 
           &-above {
             position: absolute;
@@ -406,7 +405,7 @@
             left: 0;
             width: 100%;
             height: 7rem;
-            border: 2px solid variables.colors(white_1);
+            border: 2px solid var.colors(white_1);
             border-radius: 4rem;
             clip-path: polygon(0% 0%, 100% 0%, 95% 90%, 5% 90%);
           }
@@ -417,70 +416,70 @@
             left: 0;
             width: 100%;
             height: 7rem;
-            border: 2px solid variables.colors(white_1);
+            border: 2px solid var.colors(white_1);
             border-radius: 4rem;
             clip-path: polygon(100% 100%, 0% 100%, 5% 10%, 95% 10%);
           }
         }
 
         &-category {
-          font-size: base.$text-r;
-          color: variables.colors(RightBlue);
-          margin-bottom: margin.$margin32;
+          font-size: var.$text-r;
+          color: var.colors(RightBlue);
+          margin-bottom: m.$margin32;
         }
 
         &-container {
           position: relative;
-          padding-top: padding.$padding64;
+          padding-top: p.$padding64;
         }
 
         &-content {
-          padding: padding.$padding32 padding.$padding8;
-          border: 1px solid variables.colors(white_1);
-          margin-bottom: margin.$margin16;
+          padding: p.$padding32 p.$padding8;
+          border: 1px solid var.colors(white_1);
+          margin-bottom: m.$margin16;
           border-radius: 2rem;
 
           &:last-of-type {
-            margin-bottom: margin.$margin64;
+            margin-bottom: m.$margin64;
           }
         }
 
         &-headline {
-          margin-bottom: margin.$margin16;
-          font-size: base.$text-m;
+          margin-bottom: m.$margin16;
+          font-size: var.$text-m;
           text-align: center;
 
           &:not(:first-of-type) {
-            margin-bottom: margin.$margin32;
+            margin-bottom: m.$margin32;
           }
         }
 
         &-text {
           text-align: center;
-          margin-bottom: margin.$margin64;
+          margin-bottom: m.$margin64;
         }
 
         &-description {
           text-align: center;
-          margin-bottom: margin.$margin64;
+          margin-bottom: m.$margin64;
         }
       }
 
       &__ceo {
-        font-size: base.$text-m;
-        margin: margin.$margin32 0;
+        font-size: var.$text-m;
+        margin: m.$margin32 0;
       }
 
       &__next {
-        padding: 0 padding.$padding16;
+        padding: 0 p.$padding16;
 
         &-container {
-          padding-bottom: padding.$padding64;
+          padding-bottom: p.$padding64;
         }
 
         &-title {
-          font-size: base.$text-l;
-          margin: margin.$margin64 0;
+          font-size: var.$text-l;
+          margin: m.$margin64 0;
           text-align: center;
         }
 
@@ -491,7 +490,7 @@
 
         &-link {
           max-width: 100%;
-          margin-bottom: margin.$margin16;
+          margin-bottom: m.$margin16;
 
           &:last-child {
             margin-bottom: 0;

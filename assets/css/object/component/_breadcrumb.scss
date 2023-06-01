@@ -1,8 +1,7 @@
-@use "../../base/variables";
-@use "../utility/padding";
-@use "../utility/margin";
-@use "../../base/base";
 @use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
 
 .breadcrumb {
   &__container {
@@ -10,28 +9,28 @@
     position: absolute;
     top: 2rem;
     left: 1.6rem;
-    font-size: base.$text-r;
+    font-size: var.$text-r;
   }
 
   &__item {
-    margin-right: margin.$margin8;
+    margin-right: m.$margin8;
   }
 
   &__link {
-    color: variables.colors(white_1);
+    color: var.colors(white_1);
 
     &:hover {
-      color: variables.colors(primary);
+      color: var.colors(primary);
       cursor: pointer;
     }
 
     &-active {
-      color: variables.colors(white_1);
+      color: var.colors(white_1);
     }
   }
 
   &__img {
-    margin-right: margin.$margin8;
+    margin-right: m.$margin8;
     transform: rotate(90deg);
   }
 }

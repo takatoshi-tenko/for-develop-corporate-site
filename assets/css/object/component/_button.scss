@@ -1,7 +1,6 @@
-@use "../../base/variables";
-@use "../utility/padding";
-@use "../utility/margin";
-@use "../../base/base";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
 
 %large {
   min-width: 30rem;
@@ -13,7 +12,7 @@
   line-height: 1.4;
 
   &:hover {
-    background-color: variables.colors(gray6);
+    background-color: var.colors(gray6);
     cursor: pointer;
   }
 }
@@ -23,12 +22,12 @@
   max-width: 30rem;
   display: block;
   text-align: center;
-  padding: padding.$padding16 0;
+  padding: p.$padding16 0;
   border-radius: 10rem;
   font-size: 1.6rem;
 
   &:hover {
-    background-color: variables.colors(gray6);
+    background-color: var.colors(gray6);
     cursor: pointer;
   }
 }
@@ -38,8 +37,8 @@
   &-large {
 
     @extend %large;
-    color: variables.colors(white_1);
-    background-color: variables.colors(navy_2);
+    color: var.colors(white_1);
+    background-color: var.colors(navy_2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -51,22 +50,22 @@
     }
 
     &__text {
-      font-size: base.$text-m;
+      font-size: var.$text-m;
     }
 
     &__img {
       &-above {
-        margin-right: margin.$margin8;
+        margin-right: m.$margin8;
       }
 
       &-below {
-        margin-left: margin.$margin8;
+        margin-left: m.$margin8;
       }
     }
 
     &__description {
-      font-size: base.$text-r;
-      margin-top: margin.$margin16;
+      font-size: var.$text-r;
+      margin-top: m.$margin16;
     }
   }
 
@@ -81,18 +80,18 @@
     }
 
     &__img {
-      margin-right: margin.$margin4;
+      margin-right: m.$margin4;
     }
 
     &__text {
-      margin-right: margin.$margin4;
+      margin-right: m.$margin4;
     }
 
     &-primary {
 
       @extend %medium;
-      color: variables.colors(white_1);
-      background-color: variables.colors(primary);
+      color: var.colors(white_1);
+      background-color: var.colors(primary);
 
       .send-icon {
 
@@ -109,8 +108,8 @@
     &-secondary {
 
       @extend %medium;
-      color: variables.colors(white_1);
-      background-color: variables.colors(navy_1);
+      color: var.colors(white_1);
+      background-color: var.colors(navy_1);
 
       .send-icon {
 
@@ -127,12 +126,12 @@
     &-tertiary {
 
       @extend %medium;
-      color: variables.colors(navy_1);
+      color: var.colors(navy_1);
       background-color: transparent;
-      border: 1px solid variables.colors(navy_1);
+      border: 1px solid var.colors(navy_1);
 
       .send-icon {
-        margin-left: margin.$margin8;
+        margin-left: m.$margin8;
 
         &:last-child {
           display: none;
@@ -140,8 +139,8 @@
       }
 
       &:hover {
-        border: 1px solid variables.colors(gray6);
-        color: variables.colors(white_1);
+        border: 1px solid var.colors(gray6);
+        color: var.colors(white_1);
 
         & .send-icon:not(:last-child) {
           display: none;
@@ -156,7 +155,7 @@
     &-quaternary {
 
       @extend %medium;
-      color: variables.colors(white_1);
+      color: var.colors(white_1);
       background-color: transparent;
       border: 1px solid #fff;
 
@@ -172,7 +171,7 @@
       }
 
       &:hover {
-        border: 1px solid variables.colors(gray6);
+        border: 1px solid var.colors(gray6);
       }
     }
   }
@@ -181,19 +180,19 @@
 
     &-primary {
       font-size: 1.6rem;
-      color: variables.colors(navy_1);
+      color: var.colors(navy_1);
 
       &:hover {
-        color: variables.colors(primary);
+        color: var.colors(primary);
       }
     }
 
     &-secondary {
       font-size: 1.6rem;
-      color: variables.colors(white_1);
+      color: var.colors(white_1);
 
       &:hover {
-        color: variables.colors(primary);
+        color: var.colors(primary);
       }
     }
 

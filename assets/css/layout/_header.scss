@@ -74,7 +74,7 @@
   }
 
   &__link {
-    font-size: variables.$text-l;
+    font-size: var.$text-l;
 
     &-allow {
       width: 2.4rem;
@@ -95,7 +95,7 @@
         display: flex;
 
         &>p {
-          font-size: variables.$text-m;
+          font-size: var.$text-m;
         }
       }
 
@@ -124,7 +124,7 @@
         }
 
         &>li>span {
-          font-size: variables.$text-r;
+          font-size: var.$text-r;
           color: #000;
         }
       }
@@ -148,7 +148,7 @@
     padding: p.$padding32 p.$padding16;
 
     &-button {
-      font-size: variables.$text-r;
+      font-size: var.$text-r;
       display: flex;
       justify-content: center;
       align-items: center;
@@ -213,7 +213,7 @@
           display: flex;
 
           &>p {
-            font-size: variables.$text-r;
+            font-size: var.$text-r;
           }
         }
 
@@ -269,7 +269,7 @@
         min-width: 15.5rem;
 
         &>button {
-          font-size: variables.$text-r;
+          font-size: var.$text-r;
         }
 
         &>img {

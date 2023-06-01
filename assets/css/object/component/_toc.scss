@@ -1,24 +1,23 @@
-@use "../../base/variables";
-@use "../utility/padding";
-@use "../utility/margin";
-@use "../../base/base";
 @use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
 
 .toc {
   position: absolute;
   bottom: -5%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: base.$text-r;
-  color: variables.colors(white_1);
-  background-color: variables.colors(navy_2);
-  padding: 2rem padding.$padding32;
+  font-size: var.$text-r;
+  color: var.colors(white_1);
+  background-color: var.colors(navy_2);
+  padding: 2rem p.$padding32;
   border-radius: 10rem;
   max-width: 102.4rem;
   width: 70%;
 
   &__wrapper {
-    padding: 0 padding.$padding16;
+    padding: 0 p.$padding16;
   }
 
   &__container {
@@ -27,7 +26,7 @@
   }
 
   &__link {
-    margin-right: margin.$margin8;
+    margin-right: m.$margin8;
 
     &:hover {
       opacity: 0.6;
@@ -35,7 +34,7 @@
   }
 }
 
-@include mixin.mq(lg-header) {
+@include mixin.mq(xl) {
   .toc {
     width: 85%;
   }

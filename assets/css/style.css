@@ -198,7 +198,7 @@ h1 {
   font-size: 6rem;
   line-height: 1.5;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: ) {
   h1 {
     font-size: 8rem;
   }
@@ -208,7 +208,7 @@ h2 {
   font-size: 4rem;
   line-height: 1.5;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: ) {
   h2 {
     font-size: 6rem;
   }
@@ -218,7 +218,7 @@ h3 {
   font-size: 3.2rem;
   line-height: 1.5;
 }
-@media screen and (min-width: 768px) {
+@media (min-width: ) {
   h3 {
     font-size: 4rem;
   }
@@ -374,7 +374,7 @@ p {
 .nav__contact-button > img {
   margin-left: 0.8rem;
 }
-@media screen and (min-width: 1065px) {
+@media (min-width: screen and (min-width: 1065px)) {
   .nav {
     font-size: 8rem;
   }
@@ -592,7 +592,7 @@ p {
   font-size: 1.6rem;
   color: #fff;
 }
-@media screen and (min-width: 1065px) {
+@media (min-width: screen and (min-width: 1065px)) {
   .footer {
     padding-top: 9.6rem;
   }
@@ -863,7 +863,7 @@ p {
   color: #fff;
 }
 
-@media screen and (min-width: 1065px) {
+@media (min-width: ) {
   .home__key-visual__text {
     top: 48%;
     right: 11%;
@@ -957,7 +957,7 @@ body.fixed {
   opacity: 0.6;
 }
 
-@media screen and (min-width: 1065px) {
+@media (min-width: screen and (min-width: 1065px)) {
   .toc {
     width: 85%;
   }
@@ -1149,7 +1149,7 @@ main {
   justify-content: center;
 }
 
-@media screen and (min-width: 1065px) {
+@media (min-width: ) {
   .message__title {
     margin-bottom: 3.2rem;
   }
@@ -1470,7 +1470,7 @@ main {
   margin-bottom: 0;
 }
 
-@media screen and (min-width: 1065px) {
+@media (min-width: ) {
   .vision-content {
     display: flex;
     justify-content: center;
