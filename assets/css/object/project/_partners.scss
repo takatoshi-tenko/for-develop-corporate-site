@@ -1,0 +1,93 @@
+@use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
+
+%headline {
+  font-size: var.$text-l;
+  white-space: nowrap;
+  color: var.colors(primary);
+  margin-bottom: m.$margin16;
+}
+
+%headline-sub {
+  display: block;
+  font-size: var.$text-m;
+  color: var.colors(gray4);
+  margin-bottom: m.$margin32;
+}
+
+.partners,
+.sponsor {
+  &__container {
+    padding: 0 p.$padding16;
+    margin-bottom: m.$margin128;
+  }
+
+  &__headline {
+    @extend %headline;
+
+    &-sub {
+      @extend %headline-sub
+    }
+  }
+}
+
+.partners {
+  background-color: var.colors(gray1);
+
+  &__content {}
+
+  &__item {
+    margin-bottom: m.$margin32;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    height: 24rem;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    object-fit: contain;
+    margin-bottom: m.$margin16;
+    width: 100%;
+    background-color: white;
+  }
+
+  &__name {
+    display: block;
+    font-size: var.$text-m;
+    margin-bottom: m.$margin8;
+  }
+
+  &__position {
+    font-size: var.$text-r;
+    color: var.colors(gray4);
+  }
+}
+
+@include mixin.mq(xl) {
+  .partners {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__headline {
+      width: 40rem;
+    }
+
+    &__content {
+      width: 60.8rem;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 48%;
+    }
+  }
+}

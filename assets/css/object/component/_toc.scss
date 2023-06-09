@@ -5,7 +5,7 @@
 
 .toc {
   position: absolute;
-  bottom: -5%;
+  bottom: -3%;
   left: 50%;
   transform: translateX(-50%);
   font-size: var.$text-r;
@@ -36,6 +36,7 @@
 
 @include mixin.mq(xl) {
   .toc {
-    width: 85%;
+    box-sizing: border-box;
+    width: 100%;
   }
 }

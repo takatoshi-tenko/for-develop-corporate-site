@@ -1,0 +1,242 @@
+@use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
+
+%headline {
+  font-size: var.$text-l;
+  color: var.colors(primary);
+  margin-bottom: m.$margin32;
+}
+
+.profile {
+  background-color: var.colors(gray1);
+}
+
+.board-member,
+.group-company,
+.profile,
+.access {
+  &__container {
+    padding: 0 p.$padding16;
+    margin-bottom: m.$margin128;
+  }
+
+  &__headline {
+    @extend %headline
+  }
+}
+
+.board-member {
+  &__content {}
+
+  &__item {
+    margin-bottom: m.$margin32;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    height: 24rem;
+    box-sizing: border-box;
+    border-radius: 2rem;
+    object-fit: cover;
+    margin-bottom: m.$margin16;
+    width: 100%;
+    background-color: white;
+  }
+
+  &__name {
+    display: block;
+    font-size: var.$text-m;
+    margin-bottom: m.$margin8;
+  }
+
+  &__position {
+    font-size: var.$text-r;
+    color: var.colors(gray4);
+  }
+}
+
+.group-company {
+  &__content {
+    display: block;
+
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__item {
+    margin-bottom: m.$margin32;
+  }
+
+  &__img {
+    box-sizing: border-box;
+    border-radius: 2rem;
+    object-fit: cover;
+    margin-bottom: m.$margin16;
+  }
+
+  &__name {
+    display: block;
+    font-size: var.$text-m;
+    margin-bottom: m.$margin8;
+  }
+
+  &__description {
+    font-size: var.$text-r;
+    color: var.colors(gray4);
+  }
+}
+
+.profile {
+  &__content {
+    padding: p.$padding32;
+    background-color: var.colors(white_1);
+    border-radius: 3rem;
+
+    &-headline {
+      font-size: var.$text-r;
+      color: var.colors(primary);
+      width: 40%;
+    }
+
+    &-text {
+      font-size: var.$text-r;
+      width: 58%;
+    }
+
+    &-company,
+    &-member,
+    &-about {
+      border-bottom: 1px solid var.colors(gray3);
+      margin-bottom: m.$margin16;
+
+      &__item {
+        display: flex;
+        margin-bottom: m.$margin16;
+      }
+    }
+
+    &-about {
+      border-bottom: 0;
+    }
+  }
+
+  &__item {}
+
+  &__img {
+    box-sizing: border-box;
+    border-radius: 2rem;
+    object-fit: cover;
+    margin-bottom: m.$margin16;
+  }
+
+  &__name {
+    display: block;
+    font-size: var.$text-m;
+    margin-bottom: m.$margin8;
+  }
+
+  &__description {
+    font-size: var.$text-r;
+    color: var.colors(gray4);
+  }
+}
+
+.access {
+  &__content {
+    border-radius: 2rem;
+    background-color: var.colors(white_1);
+    overflow: hidden;
+
+    &__text {
+      &-group {
+        font-size: var.$text-r;
+        padding: p.$padding32;
+
+        &__item {
+          display: flex;
+          padding: p.$padding16 0;
+          border-bottom: 1px solid var.colors(gray3);
+
+          &:last-child {
+            margin-bottom: 0;
+            border-bottom: 0;
+          }
+        }
+
+        &-headline {
+          color: var.colors(primary);
+          width: 40%;
+        }
+
+        &-text {
+          width: 58%;
+        }
+      }
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 24rem;
+  }
+}
+
+@include mixin.mq(xl) {
+
+  .board-member,
+  .group-company,
+  .profile,
+  .access {
+    &__container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    &__headline {
+      width: 40rem;
+    }
+
+    &__content {
+      width: 60.8rem;
+    }
+  }
+
+  .board-member {
+    &__content {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    &__item {
+      width: 48%;
+    }
+  }
+
+  .profile {
+    &__content {
+      box-sizing: border-box;
+    }
+  }
+
+  .access {
+    &__content {
+      &__text {
+        &-group {
+          padding: p.$padding64;
+        }
+      }
+    }
+
+    &__map {
+      width: 100%;
+      height: 24rem;
+    }
+  }
+}

@@ -1,8 +1,6 @@
-@use "../../base/variables";
-@use "../utility/padding";
-@use "../utility/margin";
-@use "../../base/base";
 @use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
 
 .home {
   &__key-visual {
@@ -25,12 +23,12 @@
       right: 5%;
 
       &-headline {
-        color: variables.colors(white_1);
-        margin-bottom: margin.$margin32;
+        color: var.colors(white_1);
+        margin-bottom: m.$margin32;
       }
 
       &-description {
-        color: variables.colors(white_1);
+        color: var.colors(white_1);
       }
     }
   }
@@ -40,7 +38,7 @@
   &__key-visual {
     &__container {
       position: relative;
-      margin-bottom: margin.$margin128;
+      margin-bottom: m.$margin128;
     }
 
     &__img {
@@ -57,12 +55,38 @@
       left: 5%;
       right: 5%;
       transform: translateY(-50%);
-      color: variables.colors(white_1);
+      color: var.colors(white_1);
     }
   }
 }
 
-@include mixin.mq(lg-header) {
+.common {
+  &__key-visual {
+    &__container {
+      position: relative;
+      margin-bottom: m.$margin128;
+    }
+
+    &__video {
+      width: 100%;
+      height: 20rem;
+      object-position: 42.5%;
+      object-fit: cover;
+      box-sizing: border-box;
+    }
+
+    &__text {
+      position: absolute;
+      top: 50%;
+      left: 5%;
+      right: 5%;
+      transform: translateY(-50%);
+      color: var.colors(white_1);
+    }
+  }
+}
+
+@include mixin.mq(xl) {
   .home {
     &__key-visual {
       &__text {

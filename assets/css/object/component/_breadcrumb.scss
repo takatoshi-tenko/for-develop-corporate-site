@@ -33,4 +33,16 @@
     margin-right: m.$margin8;
     transform: rotate(90deg);
   }
+
+  @include mixin.mq(xl) {
+    &__container {
+      display: flex;
+      position: absolute;
+      top: 2rem;
+      left: 1.6rem;
+      font-size: var.$text-r;
+      max-width: 102.4rem;
+      margin: 0 auto;
+    }
+  }
 }

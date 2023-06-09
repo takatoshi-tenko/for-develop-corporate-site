@@ -138,24 +138,17 @@
   }
 
   &__contact {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
     box-sizing: border-box;
-    background-color: var.colors(white_1);
-    border-top: 1px solid var.colors(gray_3);
-    padding: p.$padding32 p.$padding16;
+    max-width: 100%;
 
-    &-button {
-      font-size: var.$text-r;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-
-      &>img {
-        margin-left: m.$margin8;
-      }
+    &-wrapper {
+      background-color: var.colors(white_1);
+      border-top: 1px solid var.colors(gray_3);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: p.$padding32 p.$padding16;
     }
   }
 
@@ -258,12 +251,15 @@
     }
 
     &__contact {
-      position: relative;
-      box-sizing: border-box;
-      background-color: transparent;
-      border-top: none;
-      padding: 0;
-      width: auto;
+
+      &-wrapper {
+        position: relative;
+        box-sizing: border-box;
+        background-color: transparent;
+        border-top: none;
+        padding: 0;
+        width: auto;
+      }
 
       &-button {
         min-width: 15.5rem;

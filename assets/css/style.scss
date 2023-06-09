@@ -25,13 +25,17 @@ object
 ------------------------------ */
 @use "object/component/breadcrumb";
 @use "object/component/button";
+@use "object/component/content";
 @use "object/component/key-visual";
 @use "object/component/modal";
+@use "object/component/next-content";
 @use "object/component/toc";
 
 /* Project
 ------------------------------ */
 @use "object/project/home";
+@use "object/project/partners";
+@use "object/project/profile";
 @use "object/project/vision";
 
 /* Utility

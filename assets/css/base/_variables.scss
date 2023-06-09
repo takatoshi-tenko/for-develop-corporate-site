@@ -28,3 +28,10 @@ $colors: (
 
   @return map-get($colors, $key);
 }
+
+.section {
+  &__wrapper {
+    max-width: 102.4rem;
+    margin: 0 auto;
+  }
+}
