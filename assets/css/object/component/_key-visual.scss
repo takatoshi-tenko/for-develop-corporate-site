@@ -3,12 +3,14 @@
 @use "../utility/margin" as m;
 
 .home {
+
   &__key-visual {
+
     &__container {
       position: relative;
       min-height: 70rem;
 
-      &>img {
+      >img {
         width: 100%;
         min-height: 70rem;
         object-position: 42.5%;
@@ -35,7 +37,9 @@
 }
 
 .vision {
+
   &__key-visual {
+
     &__container {
       position: relative;
       margin-bottom: m.$margin128;
@@ -61,7 +65,9 @@
 }
 
 .common {
+
   &__key-visual {
+
     &__container {
       position: relative;
       margin-bottom: m.$margin128;
@@ -87,8 +93,11 @@
 }
 
 @include mixin.mq(xl) {
+
   .home {
+
     &__key-visual {
+
       &__text {
         top: 48%;
         right: 11%;

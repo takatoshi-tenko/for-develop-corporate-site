@@ -14,7 +14,7 @@ $colors: (
   gray6: #3d5266,
   gray7: #2b4054,
   gray8: #182b3f,
-  RightBlue: #80aaff,
+  lightblue1: #80aaff,
   navy_1: #1e3250,
   navy_2: #182b3f,
   gray_1: #f4f6f8,
@@ -30,6 +30,7 @@ $colors: (
 }
 
 .section {
+
   &__wrapper {
     max-width: 102.4rem;
     margin: 0 auto;

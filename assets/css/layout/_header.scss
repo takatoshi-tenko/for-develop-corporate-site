@@ -94,7 +94,7 @@
       &__headline {
         display: flex;
 
-        &>p {
+        >p {
           font-size: var.$text-m;
         }
       }
@@ -123,7 +123,7 @@
           background-color: var.colors(gray2);
         }
 
-        &>li>span {
+        >li > span {
           font-size: var.$text-r;
           color: #000;
         }
@@ -205,7 +205,7 @@
         &__headline {
           display: flex;
 
-          &>p {
+          >p {
             font-size: var.$text-r;
           }
         }
@@ -230,7 +230,7 @@
       display: flex;
       justify-content: center;
 
-      &>ul {
+      >ul {
         width: 25rem;
         margin-right: m.$margin64;
       }
@@ -264,11 +264,11 @@
       &-button {
         min-width: 15.5rem;
 
-        &>button {
+        >button {
           font-size: var.$text-r;
         }
 
-        &>img {
+        >img {
           right: -15%;
         }
       }

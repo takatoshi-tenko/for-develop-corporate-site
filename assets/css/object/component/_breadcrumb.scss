@@ -4,6 +4,7 @@
 @use "../utility/padding" as p;
 
 .breadcrumb {
+
   &__container {
     display: flex;
     position: absolute;
@@ -35,6 +36,7 @@
   }
 
   @include mixin.mq(xl) {
+
     &__container {
       display: flex;
       position: absolute;

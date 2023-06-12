@@ -53,6 +53,7 @@
     }
 
     &__img {
+
       &-above {
         margin-right: m.$margin8;
       }
@@ -116,19 +117,8 @@
       color: var.colors(white_1);
       background-color: var.colors(primary);
 
-      .send-icon {
-
-        &:not(:last-child) {
-          display: none;
-        }
-
-        &:last-child {
-          display: inline-block;
-        }
-      }
-
       &.yoshina {
-        max-width: 30rem
+        max-width: 30rem;
       }
     }
 
@@ -137,17 +127,6 @@
       @extend %medium;
       color: var.colors(white_1);
       background-color: var.colors(navy_1);
-
-      .send-icon {
-
-        &:not(:last-child) {
-          display: none;
-        }
-
-        &:last-child {
-          display: inline-block;
-        }
-      }
 
       &.thanks {
         width: 18.4rem;
@@ -162,25 +141,10 @@
       background-color: transparent;
       border: 1px solid var.colors(navy_1);
 
-      .send-icon {
-        margin-left: m.$margin8;
-
-        &:last-child {
-          display: none;
-        }
-      }
-
       &:hover {
-        border: 1px solid var.colors(gray6);
+        background-color: var.colors(gray6);
         color: var.colors(white_1);
-
-        & .send-icon:not(:last-child) {
-          display: none;
-        }
-
-        & .send-icon:last-child {
-          display: inline-block;
-        }
+        border: 1px solid var.colors(gray6);
       }
     }
 
@@ -191,18 +155,8 @@
       background-color: transparent;
       border: 1px solid #fff;
 
-      .send-icon {
-
-        &:not(:last-child) {
-          display: none;
-        }
-
-        &:last-child {
-          display: inline-block;
-        }
-      }
-
       &:hover {
+        background-color: var.colors(gray6);
         border: 1px solid var.colors(gray6);
       }
     }

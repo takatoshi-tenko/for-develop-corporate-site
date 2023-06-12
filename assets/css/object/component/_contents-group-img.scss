@@ -26,10 +26,12 @@
   }
 
   &__headline {
+
     @extend %headline;
 
     &-sub {
-      @extend %headline-sub
+
+      @extend %headline-sub;
     }
   }
 
@@ -89,6 +91,7 @@
   }
 
   @include mixin.mq(xl) {
+
     &__wrapper {
       padding: p.$padding256 0;
     }
@@ -146,6 +149,3 @@
     }
   }
 }
-
-
-.contents-group-img {}

@@ -1,6 +1,6 @@
-@use "../../base/variables";
-@use "../utility/padding";
-@use "../utility/margin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
 
 body.fixed {
   position: fixed;
@@ -30,14 +30,14 @@ body.fixed {
     border-radius: 3rem;
     transform: translate(-50%, -50%);
     overflow: scroll;
-    background-color: variables.colors(white_1);
+    background-color: var.colors(white_1);
     height: 60%;
     width: 60%;
-    padding: padding.$padding96 padding.$padding32 0;
+    padding: p.$padding96 p.$padding32 0;
   }
 
   &__inner {
-    background-color: variables.colors(gray2);
+    background-color: var.colors(gray2);
   }
 
   &__button {
@@ -48,7 +48,7 @@ body.fixed {
   }
 
   &__link {
-    padding: padding.$padding16 padding.$padding32;
+    padding: p.$padding16 p.$padding32;
     border-radius: 10rem;
     display: flex;
     justify-content: center;
@@ -62,7 +62,7 @@ body.fixed {
     top: 3.2rem;
     right: 4rem;
     font-size: 1.6rem;
-    color: variables.colors(gray_6);
+    color: var.colors(gray_6);
 
     &:hover {
       opacity: 0.6;

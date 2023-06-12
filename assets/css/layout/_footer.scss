@@ -69,7 +69,7 @@
             border-radius: 5px;
           }
 
-          &>p {
+          >p {
             font-size: var.$text-m;
           }
         }
@@ -176,7 +176,7 @@
             color: var.colors(white_1);
             display: flex;
 
-            &>p {
+            >p {
               font-size: var.$text-r;
             }
           }

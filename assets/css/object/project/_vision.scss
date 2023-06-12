@@ -4,6 +4,7 @@
 @use "../utility/padding" as p;
 
 .vision {
+
   &-content {
     padding: 0 p.$padding16;
 
@@ -75,7 +76,7 @@
       color: var.colors(primary);
 
       &.company-overview {
-        color: var.colors(RightBlue);
+        color: var.colors(lightblue1);
       }
     }
 
@@ -146,7 +147,7 @@
 
       &-line {
         position: absolute;
-        content: '';
+        content: "";
         top: -6%;
         left: 50%;
         width: 2px;
@@ -179,7 +180,7 @@
 
       &-category {
         font-size: var.$text-r;
-        color: var.colors(RightBlue);
+        color: var.colors(lightblue1);
         margin-bottom: m.$margin32;
       }
 
@@ -226,7 +227,9 @@
 }
 
 @include mixin.mq(xl) {
+
   .vision {
+
     &-content {
       display: flex;
       justify-content: center;
@@ -263,7 +266,7 @@
         }
 
         &-content {
-          margin-top: m.$margin128
+          margin-top: m.$margin128;
         }
       }
 
@@ -306,7 +309,7 @@
         color: var.colors(primary);
 
         &.company-overview {
-          color: var.colors(RightBlue);
+          color: var.colors(lightblue1);
         }
       }
 
@@ -397,7 +400,7 @@
 
         &-line {
           position: absolute;
-          content: '';
+          content: "";
           top: -8%;
           left: 50%;
           width: 2px;
@@ -432,7 +435,7 @@
 
         &-category {
           font-size: var.$text-r;
-          color: var.colors(RightBlue);
+          color: var.colors(lightblue1);
           margin-bottom: m.$margin32;
         }
 
@@ -479,5 +482,3 @@
     }
   }
 }
-
-.mission {}

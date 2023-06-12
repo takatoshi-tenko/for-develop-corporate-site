@@ -4,6 +4,7 @@
 @use "../utility/padding" as p;
 
 .thanks {
+
   &__container {
     margin: m.$margin64 0;
     text-align: center;
@@ -14,7 +15,7 @@
     margin-bottom: m.$margin32;
 
     &.error {
-      color: var.colors(RightBlue);
+      color: var.colors(lightblue1);
     }
   }
 
@@ -31,6 +32,7 @@
   }
 
   @include mixin.mq(xl) {
+
     &__container {
       margin: m.$margin128 0;
     }

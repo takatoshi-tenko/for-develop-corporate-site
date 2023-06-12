@@ -19,24 +19,25 @@
 
 .partners,
 .sponsor {
+
   &__container {
     padding: 0 p.$padding16;
     margin-bottom: m.$margin128;
   }
 
   &__headline {
+
     @extend %headline;
 
     &-sub {
-      @extend %headline-sub
+
+      @extend %headline-sub;
     }
   }
 }
 
 .partners {
   background-color: var.colors(gray1);
-
-  &__content {}
 
   &__item {
     margin-bottom: m.$margin32;
@@ -53,7 +54,7 @@
     object-fit: contain;
     margin-bottom: m.$margin16;
     width: 100%;
-    background-color: white;
+    background-color: var.colors(white_1);
   }
 
   &__name {
@@ -69,7 +70,9 @@
 }
 
 @include mixin.mq(xl) {
+
   .partners {
+
     &__container {
       display: flex;
       justify-content: space-between;
