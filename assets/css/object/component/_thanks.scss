@@ -1,0 +1,42 @@
+@use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
+
+.thanks {
+  &__container {
+    margin: m.$margin64 0;
+    text-align: center;
+    padding: 0 p.$padding16;
+  }
+
+  &__title {
+    margin-bottom: m.$margin32;
+
+    &.error {
+      color: var.colors(RightBlue);
+    }
+  }
+
+  &__text {
+    margin-bottom: m.$margin32;
+  }
+
+  &__img {
+    margin-bottom: m.$margin32;
+    border-radius: 5rem;
+    max-width: 48rem;
+    height: 34.3rem;
+    object-fit: cover;
+  }
+
+  @include mixin.mq(xl) {
+    &__container {
+      margin: m.$margin128 0;
+    }
+
+    &__img {
+      height: 48rem;
+    }
+  }
+}

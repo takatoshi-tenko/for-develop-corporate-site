@@ -1,0 +1,136 @@
+@use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
+
+.contents-group {
+  padding: 0 p.$padding16;
+
+  &.overview {
+    margin: m.$margin128 0;
+    background-color: var.colors(white_1);
+  }
+
+  &__video {
+    margin-bottom: m.$margin32;
+    width: 100%;
+    height: 36rem;
+    border-radius: 5rem;
+    object-fit: cover;
+
+    &-bg {
+      height: 50rem;
+      width: 100%;
+      object-fit: cover;
+    }
+
+    &.product {
+      max-width: 100%;
+      margin-bottom: m.$margin64;
+    }
+
+    &.secondary {
+      border-radius: 24rem;
+      height: 68.6rem;
+      max-width: 48rem;
+      margin-bottom: m.$margin64;
+      margin-top: m.$margin128;
+    }
+  }
+
+  &__title {
+    margin-bottom: m.$margin16;
+    font-size: var.$text-m;
+    color: var.colors(primary);
+
+    &.company-overview {
+      color: var.colors(RightBlue);
+    }
+  }
+
+  &__text {
+    margin-bottom: m.$margin32;
+    word-break: break-all;
+
+    &-sub {
+      margin-bottom: m.$margin16;
+    }
+  }
+
+  &__description {
+    margin-bottom: m.$margin32;
+    word-break: break-all;
+  }
+
+  @include mixin.mq(xl) {
+    display: flex;
+    justify-content: center;
+
+    &.overview {
+      margin: m.$margin256 0;
+    }
+
+    &__video {
+      margin-bottom: 0;
+      margin-right: m.$margin64;
+      max-width: 48rem;
+      height: 48rem;
+
+      &-bg {
+        height: 50rem;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &.product {
+        max-width: 102.4rem;
+        height: 72rem;
+        margin: 0 auto m.$margin64;
+        display: flex;
+        justify-content: center;
+      }
+
+      &.secondary {
+        border-radius: 24rem;
+        height: 68.6rem;
+        max-width: 48rem;
+        margin-bottom: 0;
+        margin-top: m.$margin128;
+      }
+    }
+
+    &__content {
+      width: 48rem;
+    }
+
+    &__title {
+      margin-bottom: m.$margin32;
+      font-size: var.$text-m;
+      color: var.colors(primary);
+
+      &.company-overview {
+        color: var.colors(RightBlue);
+      }
+    }
+
+    &__text {
+      margin-bottom: m.$margin64;
+
+      &-sub {
+        margin-bottom: m.$margin16;
+      }
+    }
+
+    &__description {
+      margin-bottom: 0;
+
+      &.company-overview {
+        margin-bottom: m.$margin32;
+      }
+
+      &.value {
+        margin-bottom: m.$margin32;
+      }
+    }
+  }
+}

@@ -25,10 +25,13 @@ object
 ------------------------------ */
 @use "object/component/breadcrumb";
 @use "object/component/button";
-@use "object/component/content";
+@use "object/component/contents-group-img";
+@use "object/component/contents-group";
 @use "object/component/key-visual";
 @use "object/component/modal";
+@use "object/component/news-detail";
 @use "object/component/next-content";
+@use "object/component/thanks";
 @use "object/component/toc";
 
 /* Project

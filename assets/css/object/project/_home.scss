@@ -38,6 +38,7 @@ main {
       display: flex;
       justify-content: center;
       margin: 0 auto;
+      max-width: 30.4rem;
     }
   }
 }
@@ -85,6 +86,7 @@ main {
   &__btn {
     display: flex;
     justify-content: center;
+    max-width: 30.4rem;
   }
 }
 
@@ -172,6 +174,8 @@ main {
 
     &-mission {
       max-width: 30.4rem;
+      display: flex;
+      justify-content: center;
     }
   }
 }
@@ -241,6 +245,19 @@ main {
       max-width: 28.8rem;
       display: flex;
       justify-content: center;
+    }
+  }
+
+  &__category {
+    &__container {
+      margin-bottom: m.$margin32;
+      padding: 8.8rem p.$padding16 0;
+    }
+
+    &__title {
+      display: block;
+      font-size: var.$text-r;
+      margin-bottom: m.$margin16;
     }
   }
 }
@@ -399,6 +416,24 @@ main {
 
       &-info {
         width: 28.8rem;
+      }
+    }
+
+    &__category {
+      &__container {
+        display: flex;
+        margin: 0 auto;
+        align-items: center;
+        max-width: 102.4rem;
+        margin-bottom: m.$margin64;
+        padding: 12rem p.$padding16 0;
+      }
+
+      &__title {
+        display: block;
+        font-size: var.$text-r;
+        margin-right: m.$margin16;
+        margin-bottom: 0;
       }
     }
   }

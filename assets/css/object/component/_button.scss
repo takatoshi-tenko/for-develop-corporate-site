@@ -1,3 +1,4 @@
+@use "../../base/mixin";
 @use "../../base/variables" as var;
 @use "../utility/margin" as m;
 @use "../utility/padding" as p;
@@ -71,6 +72,30 @@
 
     @extend %medium;
 
+    margin-bottom: m.$margin16;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    &.active {
+      width: 21rem;
+      color: var.colors(white_1);
+      background-color: var.colors(navy_1);
+      cursor: auto;
+    }
+
+    &.disable {
+      width: 21rem;
+      color: var.colors(white_1);
+      background-color: var.colors(gray3);
+
+      &:hover {
+        cursor: pointer;
+        background-color: var.colors(gray5);
+      }
+    }
+
     &__inner {
       display: flex;
       align-items: center;
@@ -101,6 +126,10 @@
           display: inline-block;
         }
       }
+
+      &.yoshina {
+        max-width: 30rem
+      }
     }
 
     &-secondary {
@@ -118,6 +147,11 @@
         &:last-child {
           display: inline-block;
         }
+      }
+
+      &.thanks {
+        width: 18.4rem;
+        margin: 0 auto;
       }
     }
 
@@ -171,6 +205,10 @@
       &:hover {
         border: 1px solid var.colors(gray6);
       }
+    }
+
+    @include mixin.mq(xl) {
+      margin: 0 m.$margin16 0 0;
     }
   }
 

@@ -1,0 +1,9 @@
+@use "../../base/mixin";
+@use "../../base/variables" as var;
+@use "../utility/margin" as m;
+@use "../utility/padding" as p;
+
+.news-detail {
+  background-color: var.colors(gray1);
+  background-color: var.colors(navy_1);
+}
